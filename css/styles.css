@@ -1,0 +1,177 @@
+/* Переменные */
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196F3;
+    --white-color: #FFFFFF;
+    --beige-color: #F5F4FA;
+    --dark-color: #2F303A; 
+}
+ 
+/* Селектор ссылок */
+.link {
+    color: inherit;
+    text-decoration: none;
+ }
+/* селектор списков */
+.list {
+    list-style: none;
+}
+
+body {
+    background-color: var(--white-color);
+    color: var(--primary-text-color);
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+/* Стилистика логотипа */
+.logo {
+    color: #000000; 
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.19;
+
+}
+.logo .logo-web {
+    color: var(--accent-color)
+}
+
+.logo .logo-studio {
+    color: var(--white-color);
+}
+
+/* Стилистика общей шапки */
+.nav-list .link,
+.contact-list {
+    color: var(--title-text-color);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    list-style: none;
+}
+.nav-list .link:hover,
+.nav-list .link:focus {
+    color: var(--accent-color);
+}
+
+.link.current {
+    color: var(--accent-color);
+}
+
+.contact-list {
+    color: var(--primary-text-color)
+}
+
+.contact-list .link:hover,
+.contact-list .link:focus {
+    color: var(--accent-color)
+}
+
+/* Стилистика героя */
+.hero,
+.footer {
+    background-color: var(--dark-color);
+}
+.hero-title {
+    color: #fff;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1,36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.hero .button {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+   
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+}
+
+/* Стилизация секций - Студия */
+.section-title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    
+}
+
+.features-list .title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.team-section {
+    background-color: var(--beige-color);
+    
+}
+.team-section .title {
+    color: var(--title-text-color);
+    font-size: 16px;
+    line-height: 1.19;
+    font-weight: 500;    
+}
+ 
+.team-section .position {
+    font-size: 16px;
+    line-height: 1.19;
+
+}
+
+/* Стилизация секций - Портфолио */
+.button {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+}
+
+.section-works .title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.section-works .text {
+    font-size: 16px;
+    line-height: 1.88;
+}
+
+/* Стилизация футер */
+.address .local-address {
+    color: var(--white-color);
+    font-style: normal;
+}
+
+.address .contacts {
+    color: rgba(255, 255, 255, 0.6);
+}
