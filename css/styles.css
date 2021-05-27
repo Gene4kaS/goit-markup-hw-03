@@ -5,9 +5,25 @@
     --accent-color: #2196F3;
     --white-color: #FFFFFF;
     --beige-color: #F5F4FA;
-    --dark-color: #2F303A; 
+    --dark-color: #2F303A;
+    --btn-hover-color:  #188CE8;
 }
  
+/* outline: 2px solid tomato - ободок на время верстки, затем удалить */
+/* width: 970px; контейнера + 15 и 15 padding*/
+
+
+html {
+    box-sizing: border-box;
+    
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 /* Селектор ссылок */
 .link {
     color: inherit;
@@ -16,6 +32,8 @@
 /* селектор списков */
 .list {
     list-style: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
@@ -28,6 +46,12 @@ body {
     letter-spacing: 0.03em;
 }
 
+.container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    
+}
 /* Стилистика логотипа */
 .logo {
     color: #000000; 
@@ -47,7 +71,10 @@ body {
 
 /* Стилистика общей шапки */
 .nav-list .link,
-.contact-list {
+.contact {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
     color: var(--title-text-color);
     font-weight: 500;
     line-height: 1.14;
@@ -55,6 +82,7 @@ body {
 
     list-style: none;
 }
+
 .nav-list .link:hover,
 .nav-list .link:focus {
     color: var(--accent-color);
@@ -64,88 +92,142 @@ body {
     color: var(--accent-color);
 }
 
-.contact-list {
+.contact {
     color: var(--primary-text-color)
 }
 
-.contact-list .link:hover,
-.contact-list .link:focus {
+.contact .link:hover,
+.contact .link:focus {
     color: var(--accent-color)
 }
 
 /* Стилистика героя */
-.hero,
-.footer {
+.hero {
     background-color: var(--dark-color);
+    text-align: center;
 }
-.hero-title {
+.hero .title {
+    margin-top: 0;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 630px;
+
     color: #fff;
     font-family: Roboto;
     font-weight: 900;
     font-size: 44px;
     line-height: 1,36;
-    text-align: center;
+  
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .hero .button {
     color: var(--white-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    border-radius: 4px;
+    padding: 10px 32px;
+    border-width: 0px;
    
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    display: flex;
+    display: inline-block;
     align-items: center;
-    text-align: center;
+ 
     letter-spacing: 0.06em;
     cursor: pointer;
 }
 
+.hero .button:hover,
+.hero .button:focus {
+    background-color: var(--btn-hover-color);
+}
+
 /* Стилизация секций - Студия */
+.section {
+    padding-bottom: 94px;
+     
+}
+
 .section-title {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
-    
+}
+
+img {
+    display: block;
 }
 
 .features-list .title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+
     color: var(--title-text-color);
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
 }
 
-.team-section {
+.features-list p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.team {
     background-color: var(--beige-color);
     
 }
-.team-section .title {
+.team .title {
     color: var(--title-text-color);
     font-size: 16px;
     line-height: 1.19;
     font-weight: 500;    
 }
  
-.team-section .position {
+.team .position {
     font-size: 16px;
     line-height: 1.19;
-
 }
+
+.name {
+    min-width: 270px;
+}
+.name h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    
+}
+.name p {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
 
 /* Стилизация секций - Портфолио */
 .button {
     color: var(--title-text-color);
+    background-color: var(--beige-color);
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
     cursor: pointer;
     font-family: inherit;
+    border-radius: 4px;
+
+    padding: 6px 22px;
 }
 
 .button:hover {
@@ -167,6 +249,11 @@ body {
 }
 
 /* Стилизация футер */
+.footer {
+    background-color: var(--dark-color);
+    
+}
+
 .address .local-address {
     color: var(--white-color);
     font-style: normal;
@@ -174,4 +261,18 @@ body {
 
 .address .contacts {
     color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
 }
+
+.footer .web {
+    margin-bottom: 20px;
+}
+.address p {
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+.address li {
+    margin-top: 0;
+    margin-bottom: 9px;
+}
+
