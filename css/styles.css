@@ -92,15 +92,19 @@ body {
 }
 
 /* HEADER style */
+.section-header {
+    border-bottom: 1px solid #ECECEC;
+}
 
 .main-nav {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ECECEC;
+    
 }
 
 .nav {
     display: flex;
+    
 }
 .site-link .link,
 .web-link .link {
@@ -278,17 +282,21 @@ body {
 }
 
 .name {
-    min-width: 270px;
+    /* min-width: 270px; */
     text-align: center;
+    background-color: var(--white-color);
+    padding: 30px 0px 30px 0px;
+    
+    
 }
 .name h3 {
-    margin-top: 30px;
+    margin-top: 0px;
     margin-bottom: 10px;
     
 }
 .name p {
     margin-top: 0px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 .list .team-card + .team-card {
@@ -298,15 +306,15 @@ body {
 .team-card {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
+}
+.team-card img {
+    display:block;
 }
 
 /* BUTTONS style Portfolio*/
 
 .btn-cards {
-    margin-bottom: 34px;
-    
-    
+    margin-bottom: 50px;
 }
 .btns {
     display: flex;
