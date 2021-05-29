@@ -235,6 +235,9 @@ body {
 }
 
 /* DOING style */
+.doing {
+    padding-top: 0;
+}
 .pictures {
     display: flex;
 }
