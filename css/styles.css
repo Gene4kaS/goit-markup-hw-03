@@ -7,15 +7,12 @@
     --beige-color: #F5F4FA;
     --dark-color: #2F303A;
     --btn-hover-color:  #188CE8;
+    --border-container-card: #EEEEEE;
 }
  
-/* outline: 2px solid tomato - ободок на время верстки, затем удалить */
-/* width: 970px; контейнера + 15 и 15 padding*/
-
-
 html {
     box-sizing: border-box;
-    
+   
 }
 
 *,
@@ -50,11 +47,28 @@ body {
     width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
-    
+    margin-left: auto;
+    margin-right: auto;
+
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /* Стилистика логотипа */
 .logo {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    
     color: #000000; 
+
     font-family: Raleway;
     font-weight: bold;
     font-size: 26px;
@@ -69,11 +83,23 @@ body {
     color: var(--white-color);
 }
 
-/* Стилистика общей шапки */
-.nav-list .link,
-.contact {
-    padding-top: 5px;
-    padding-bottom: 5px;
+/* HEADER style */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ECECEC;
+
+}
+
+.nav {
+    display: flex;
+}    
+.site-link,
+.web-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     color: var(--title-text-color);
     font-weight: 500;
@@ -83,25 +109,40 @@ body {
     list-style: none;
 }
 
+.web-link {
+    color: var(--primary-text-color);
+}
 .nav-list .link:hover,
 .nav-list .link:focus {
     color: var(--accent-color);
+}
+.contact .link:hover,
+.contact .link:focus {
+    color: var(--accent-color)
+}
+
+.nav-list {
+    display: flex;
+    margin-left: 93px;
+}
+
+.contact {
+    display: flex;
+    margin-left: auto;    
+    color: var(--primary-text-color)
+}
+
+.nav-list .site-link + .site-link,
+.contact .web-link + .web-link {
+    margin-left: 50px;
 }
 
 .link.current {
     color: var(--accent-color);
 }
 
-.contact {
-    color: var(--primary-text-color)
-}
 
-.contact .link:hover,
-.contact .link:focus {
-    color: var(--accent-color)
-}
-
-/* Стилистика героя */
+/* HERO style */
 .hero {
     background-color: var(--dark-color);
     text-align: center;
@@ -113,12 +154,12 @@ body {
     margin-right: auto;
 
     max-width: 630px;
-
+    
     color: #fff;
     font-family: Roboto;
     font-weight: 900;
     font-size: 44px;
-    line-height: 1,36;
+    line-height: 1.364;
   
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -150,10 +191,11 @@ body {
     background-color: var(--btn-hover-color);
 }
 
-/* Стилизация секций - Студия */
+/* MAIN style */
+
 .section {
     padding-bottom: 94px;
-     
+    
 }
 
 .section-title {
@@ -164,10 +206,17 @@ body {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
+
+    text-align: center;
 }
 
-img {
-    display: block;
+/* FEATURES style */
+.features {
+    margin-top: 94px;
+}
+
+.features-list {
+    display: flex;
 }
 
 .features-list .title {
@@ -185,9 +234,27 @@ img {
     margin-bottom: 0px;
 }
 
+.features-list .text + .text {
+    margin-left: 30px;
+}
+
+/* DOING style */
+.pictures {
+    display: flex;
+}
+
+.container .pic + .pic {
+    margin-left: 30px;
+}
+
+/* TEAM style */
+
 .team {
     background-color: var(--beige-color);
-    
+}
+
+.team .list {
+    display: flex;
 }
 .team .title {
     color: var(--title-text-color);
@@ -203,6 +270,7 @@ img {
 
 .name {
     min-width: 270px;
+    text-align: center;
 }
 .name h3 {
     margin-top: 30px;
@@ -214,25 +282,90 @@ img {
     margin-bottom: 30px;
 }
 
+.list .team-card + .team-card {
+    margin-left: 30px;
+}
 
-/* Стилизация секций - Портфолио */
+.team-card {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+}
+
+
+/* BUTTONS style Portfolio*/
+.portfolio {
+    margin-top: 94px;
+}
+
+.btn-cards {
+    margin-bottom: 34px;
+    
+    
+}
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+.btns .btn-li + .btn-li {
+    margin-left: 8px;
+}
+
 .button {
     color: var(--title-text-color);
     background-color: var(--beige-color);
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.62;
+    line-height: 1.625;
     text-align: center;
     cursor: pointer;
     font-family: inherit;
     border-radius: 4px;
+    border-width: 0px;
+    letter-spacing: 0.03em;
 
     padding: 6px 22px;
 }
-
 .button:hover {
     background-color: var(--accent-color);
     color: var(--white-color);
+}
+
+/* CARDS style Portfolio*/
+.section-works {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.container-card {
+    margin-right: 30px;
+    margin-bottom: 30px;
+} 
+
+.container-card:nth-child(3n) {
+    margin-right: 0;
+}
+
+.container-card:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+}
+
+.card {
+    padding: 20px 24px;
+    border: 1px solid var(--border-container-card);
+    border-top: 0px;
+}
+.cards img {
+    display:block;
+}
+.card h2 {
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+.card p {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .section-works .title {
@@ -248,10 +381,9 @@ img {
     line-height: 1.88;
 }
 
-/* Стилизация футер */
+/* FOOTER style */
 .footer {
     background-color: var(--dark-color);
-    
 }
 
 .address .local-address {
@@ -264,9 +396,10 @@ img {
     font-style: normal;
 }
 
-.footer .web {
+.footer .logo {
+    display: inline-block;
     margin-bottom: 20px;
-}
+}   
 .address p {
     margin-top: 0;
     margin-bottom: 9px;
