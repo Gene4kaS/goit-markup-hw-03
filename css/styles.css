@@ -19,11 +19,6 @@ html {
 *::after {
     box-sizing: inherit;
 }
-/* SECTIONS style */
-.section {
-    padding-bottom: 94px;
-    padding-top: 94px;
-}
 
 /* LINKS style */
 .link {
@@ -66,11 +61,20 @@ body {
     overflow: hidden;
 }
 
+/* SECTIONS style */
+.section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+
 /* LOGO style */
-.logo {
+.nav .logo {
     padding-top: 24px;
     padding-bottom: 25px;
-    
+}
+
+.logo {
     color: #000000; 
 
     font-family: Raleway;
@@ -149,8 +153,10 @@ body {
 .hero {
     background-color: var(--dark-color);
     text-align: center;
-   
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
+
 .hero .title {
     margin-top: 0;
     margin-bottom: 35px;
@@ -404,3 +410,7 @@ body {
     margin-bottom: 9px;
 }
 
+.footer .container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
