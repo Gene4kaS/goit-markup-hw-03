@@ -12,7 +12,6 @@
  
 html {
     box-sizing: border-box;
-   
 }
 
 *,
@@ -20,13 +19,18 @@ html {
 *::after {
     box-sizing: inherit;
 }
+/* SECTIONS style */
+.section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
 
-/* Селектор ссылок */
+/* LINKS style */
 .link {
     color: inherit;
     text-decoration: none;
  }
-/* селектор списков */
+/* LIST style */
 .list {
     list-style: none;
     margin: 0px;
@@ -89,7 +93,6 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ECECEC;
-
 }
 
 .nav {
@@ -146,7 +149,7 @@ body {
 .hero {
     background-color: var(--dark-color);
     text-align: center;
-    padding-top: 94px;
+   
 }
 .hero .title {
     margin-top: 0;
@@ -193,11 +196,6 @@ body {
 }
 
 /* MAIN style */
-
-.section {
-    padding-bottom: 94px;
-    
-}
 
 .section-title {
     margin-top: 0px;
